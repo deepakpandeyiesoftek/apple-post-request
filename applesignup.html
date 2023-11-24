@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Example</title>
+</head>
+<body>
+
+<!-- Your button and associated script -->
+<button id="loginButton">login</button>
+<button id="signupButton">signup</button>
+
+<script>
+    // Your function
+    function login() {
+        const form = document.createElement('form');
+        form.method = 'post';
+        form.action = 'http://localhost/api/user/appleAuthLogin';
+
+        const input1 = document.createElement('input');
+        input1.type = 'hidden';
+        input1.name = 'code';
+        input1.value = 'c34d5b21fcc4e4932b24c43188868bb3d.0.srvvy.06mlHNje6WVjB2UXtSJ0jw';
+        form.appendChild(input1);
+
+        const input2 = document.createElement('input');
+        input2.type = 'hidden';
+        input2.name = 'id_token';
+        input2.value = 'eyJraWQiOiJmaDZCczhDIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJodHRwczovL2FwcGxlaWQuYXBwbGUuY29tIiwiYXVkIjoibmV0Lm1lZXR2IiwiZXhwIjoxNzAwODg5NTc0LCJpYXQiOjE3MDA4MDMxNzQsInN1YiI6IjAwMTQ1OS45YWJiY2YzNTg2NGE0M2E5OTIwMjNlYjE3NjM0NTQwOS4wNTI0IiwiY19oYXNoIjoiTTU2dWpjUm1WOG5aVkQ2MjJMU2tJUSIsImVtYWlsIjoiYXNoYWx1ODExQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoidHJ1ZSIsImF1dGhfdGltZSI6MTcwMDgwMzE3NCwibm9uY2Vfc3VwcG9ydGVkIjp0cnVlfQ.tCx2wzhnO88gffXTnDCi0N2tjVH-RMIZUQwkAIJwYsQ6Tkz5j0EwRJuNMMwudkb-WFImV-LMeZOlPHcJrgp_65OdDGbbqxGxWL_1XT3kg1jU9_yIN2nqTqZjhQGt2EBrL5rEhRkuNYlXEBol6Rdzsd_leSiT8reLHaDdQd81DJnI_sLaQP36HRazQb3KVqaU8hmpwbJXmU7ZLr0QCYd8dl--SXdzY4OaVjdaZMMgJ6SZLgMIpvvYg8DqUQyIBVnqbyADbR-hQCe6Xf-lJb97XlZ6iCrhcwn-Q__9tJEsstfGWteWP6rGOJqQXjAv-2xe8egctYA1awsK-5dFT_epwg';
+        form.appendChild(input2);
+
+        document.body.appendChild(form);
+        form.submit();
+    }
+
+    // Adding a click event listener to the button
+    document.getElementById('loginButton').addEventListener('click', login);
+
+    function signup() {
+        const form = document.createElement('form');
+        form.method = 'post';
+        form.action = 'http://localhost/api/user/appleAuthSignUp';
+
+        const input1 = document.createElement('input');
+        input1.type = 'hidden';
+        input1.name = 'code';
+        input1.value = 'c34d5b21fcc4e4932b24c43188868bb3d.0.srvvy.06mlHNje6WVjB2UXtSJ0jw';
+        form.appendChild(input1);
+
+        const input2 = document.createElement('input');
+        input2.type = 'hidden';
+        input2.name = 'id_token';
+        input2.value = 'eyJraWQiOiJmaDZCczhDIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJodHRwczovL2FwcGxlaWQuYXBwbGUuY29tIiwiYXVkIjoibmV0Lm1lZXR2IiwiZXhwIjoxNzAwODkzNTk1LCJpYXQiOjE3MDA4MDcxOTUsInN1YiI6IjAwMTU1OC5mNzg0MmRmNDFkZjI0NzgwYjBjYmUyMGI2Y2UzNWNkZC4xMDQxIiwiY19oYXNoIjoidnd4bVZIZEpJZklJOWJoaUxGRUYzUSIsImVtYWlsIjoiam5xNDltcWJ2ekBwcml2YXRlcmVsYXkuYXBwbGVpZC5jb20iLCJlbWFpbF92ZXJpZmllZCI6InRydWUiLCJpc19wcml2YXRlX2VtYWlsIjoidHJ1ZSIsImF1dGhfdGltZSI6MTcwMDgwNzE5NSwibm9uY2Vfc3VwcG9ydGVkIjp0cnVlfQ.Wry-8BfFd_pfw9W0qUBMtRvf2uXy4kWKXQDMaj9210-dROsR1ofGe9MVraqNOgsdSxTixzl4NX4whX06GUP5xa64hjujphOSInJjM20psVm-r7M5CAiM6FWI5p424ufE_t93ucsFGjIf4iMhvbtz3B1W8wNXm-43lqNHP5G550E6MR1mw7m_961WHw6EPrwXASkkyAZ4EpQxNQqUiVgIyVYQUYnknve0MnV8ho7htDkyFv2ODbv563x6rJ8k3gkFEsE9G0BPHxAtDLCiIOSo4IW-VAYuE_u84QlRysbgXJDQiZxqbZGqOMIiQWxxMV33wkLQkJ3DpFaY6zUlIDQ4hQ';
+        form.appendChild(input2);
+
+        // const input3 = document.createElement('input');
+        // input3.type = 'hidden';
+        // input3.name = 'user';
+        // input3.value = '{"name":{"firstName":"Vaaruni","lastName":"Agarwal"},"email":"ashalu811@gmail.com"}';
+        // form.appendChild(input3);
+
+        document.body.appendChild(form);
+        form.submit();
+    }
+
+    // Adding a click event listener to the button
+    document.getElementById('signupButton').addEventListener('click', signup);
+</script>
+
+</body>
+</html>
