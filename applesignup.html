@@ -7,12 +7,10 @@
 </head>
 <body>
 
-<!-- Your button and associated script -->
 <button id="loginButton">login</button>
 <button id="signupButton">signup</button>
 
 <script>
-    // Your function
     function login() {
         const form = document.createElement('form');
         form.method = 'post';
@@ -34,7 +32,6 @@
         form.submit();
     }
 
-    // Adding a click event listener to the button
     document.getElementById('loginButton').addEventListener('click', login);
 
     function signup() {
@@ -64,7 +61,6 @@
         form.submit();
     }
 
-    // Adding a click event listener to the button
     document.getElementById('signupButton').addEventListener('click', signup);
 </script>
 
